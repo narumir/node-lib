@@ -1,0 +1,33 @@
+{
+  "name": "@narumir/totp",
+  "version": "0.0.1",
+  "description": "totp for nodejs",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node ./build/index.js",
+    "build": "babel src --out-dir build --extensions '.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narumir/node-totp.git"
+  },
+  "keywords": [
+    "totp",
+    "otp"
+  ],
+  "author": "narumir",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/narumir/node-totp/issues"
+  },
+  "homepage": "https://github.com/narumir/node-totp#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/node": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/node": "^18.0.6",
+    "typescript": "^4.7.4"
+  }
+}
