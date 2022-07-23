@@ -11,6 +11,7 @@
     "@types/jest": "^28.1.6",
     "@types/node": "^18.0.6",
     "babel-plugin-module-resolver": "^4.1.0",
+    "ts-jest": "^28.0.7",
     "typescript": "^4.7.4"
   },
   "scripts": {
@@ -30,8 +31,5 @@
   "bugs": {
     "url": "https://github.com/narumir/node-lib/issues"
   },
-  "homepage": "https://github.com/narumir/node-lib#readme",
-  "dependencies": {
-    "ts-jest": "^28.0.7"
-  }
+  "homepage": "https://github.com/narumir/node-lib#readme"
 }
