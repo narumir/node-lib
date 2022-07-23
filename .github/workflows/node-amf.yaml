@@ -1,6 +1,11 @@
 name: node-amf publish
 
-on: push
+on: 
+  push:
+    branches:
+      - "main"
+    paths:
+      - "packages/node-amf"
 
 jobs:
   publish-github:
