@@ -5,7 +5,7 @@ on:
     branches:
       - "main"
     paths:
-      - "packages/node-amf"
+      - "packages/node-amf/**"
 
 jobs:
   publish-github:
