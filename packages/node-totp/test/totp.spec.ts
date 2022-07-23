@@ -1,6 +1,6 @@
 import {
     TOTP,
-} from "./index";
+} from "src/index";
 
 test("HMAC-SHA-1", () => {
     const timestamp = 1658305632083;
