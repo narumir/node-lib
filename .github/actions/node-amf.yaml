@@ -1,6 +1,6 @@
 name: node-amf publish
 
-on: [push]
+on: push
 
 jobs:
   publish-github:
@@ -15,7 +15,7 @@ jobs:
       - run: npm run build -w packages/node-amf
       - run: npm publish --access public -w packages/node-amf
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # publish-npm:
   #   runs-on: ubuntu-latest
