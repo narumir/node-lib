@@ -160,7 +160,7 @@ test("Deserialize AMF0 date", () => {
 });
 
 class TestTypedObject {
-    isWork: string = "It's Work!!!";
+    isWork: string = "It's Work!!!!";
 }
 
 test("Serialize AMF0 typedobject", () => {

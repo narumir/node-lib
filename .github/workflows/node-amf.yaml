@@ -3,9 +3,9 @@ name: node-amf publish
 on: 
   push:
     branches:
-      - "main"
+      - 'main'
     paths:
-      - "packages/node-amf/**"
+      - 'packages/node-amf/**'
 
 jobs:
   publish-github:
