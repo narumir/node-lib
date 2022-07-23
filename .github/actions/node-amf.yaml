@@ -1,6 +1,6 @@
-name: NPM publish
+name: node-amf publish
 
-on: push
+on: [push]
 
 jobs:
   publish-github:
