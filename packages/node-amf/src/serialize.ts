@@ -204,7 +204,7 @@ export class AMF0Serialize {
                 // TODO
                 return;
             default:
-                break;
+                throw new TypeError("Unknown AMF types.");
         }
         return this.writeUnsupportMarker();
     }
