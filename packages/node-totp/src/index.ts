@@ -74,7 +74,6 @@ export class TOTP {
 
     public generate(secret: string, timestamp: number = Date.now()) {
         const hmac = this.generateHMAC(secret, timestamp);
-        const otp = this.generateTOTP(hmac);
-        return otp;
+        return this.generateTOTP(hmac);
     }
 }

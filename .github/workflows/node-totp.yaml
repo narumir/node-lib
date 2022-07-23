@@ -1,0 +1,37 @@
+name: node-totp publish
+
+on: 
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'packages/node-totp/**'
+
+jobs:
+  publish-github:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          registry-url: https://npm.pkg.github.com
+      - run: npm ci -w packages/node-totp
+      - run: npm run build -w packages/node-totp
+      - run: npm publish --access public -w packages/node-totp
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          registry-url: https://registry.npmjs.org
+      - run: npm ci -w packages/node-totp
+      - run: npm run build -w packages/node-totp
+      - run: npm publish --access public -w packages/node-totp
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
