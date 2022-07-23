@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "libs for nodejs",
   "main": "build/index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/narumir/node-lib.git"
@@ -16,6 +15,7 @@
   },
   "homepage": "https://github.com/narumir/node-lib#readme",
   "workspaces": [
-    "packages/node-totp"
+    "packages/node-totp",
+    "packages/node-amf"
   ]
 }
