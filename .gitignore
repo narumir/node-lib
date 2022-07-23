@@ -238,4 +238,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # Custom
-/build
+/**/build
