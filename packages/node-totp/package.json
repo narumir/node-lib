@@ -16,7 +16,9 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "babel src --out-dir build --extensions '.ts'"
+    "build": "npm run check && babel src --out-dir build --extensions '.ts'",
+    "build:types": "tsc -p ./build-types.json",
+    "check": "tsc"
   },
   "repository": {
     "type": "git",
@@ -31,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/narumir/node-lib/issues"
   },
-  "homepage": "https://github.com/narumir/node-lib#readme"
+  "homepage": "https://github.com/narumir/node-lib#readme",
+  "types": "./types/index.d.ts"
 }

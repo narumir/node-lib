@@ -237,6 +237,12 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Custom
-/**/build
-/**/types
+# Source codes
+src
+test
+babel.config.js
+tsconfig.json
+build-types.json
+
+# Github action
+.github
