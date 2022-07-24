@@ -238,11 +238,14 @@ $RECYCLE.BIN/
 *.lnk
 
 # Source codes
-src
-test
+src/**
+test/**
 babel.config.js
 tsconfig.json
 build-types.json
 
 # Github action
 .github
+
+# Built types
+!*/types
