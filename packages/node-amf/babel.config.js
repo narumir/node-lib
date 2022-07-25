@@ -18,6 +18,7 @@ const envOption = {
         proposals: true,
     },
 };
+
 const aliasOption = {
     root: [
         "./src",
