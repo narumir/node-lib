@@ -14,6 +14,16 @@ export class TOTP {
     private algorithm: OTPAlgorithm = "sha1";
 
     private static DIGITS_POWER = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000];
+    private static BASE32_CHAR = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567";
+
+    static generateSecret(length: number = 16) {
+        let secret = "";
+        for (let i = 0; i < length; i++) {
+            const rand = Math.floor(Math.random() * TOTP.BASE32_CHAR.length);
+            secret += TOTP.BASE32_CHAR[rand];
+        }
+        return secret;
+    }
 
     private generateHMAC(secret: string, timestamp: number) {
         const time = Math.floor(Math.round(timestamp / 1000) / this.period)
@@ -27,11 +37,10 @@ export class TOTP {
     }
 
     private convertBase32ToHex(key: string) {
-        const base32chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
         key = key.replace(/=+$/, "");
         let bits = "";
         for (let i = 0; i < key.length; i++) {
-            const val = base32chars.indexOf(key.charAt(i).toUpperCase());
+            const val = TOTP.BASE32_CHAR.indexOf(key.charAt(i).toUpperCase());
             if (val === -1) {
                 throw new Error("Invalid base32 charactor in key");
             }

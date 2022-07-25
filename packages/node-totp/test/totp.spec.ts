@@ -9,3 +9,8 @@ test("HMAC-SHA-1", () => {
     expect(token)
         .toEqual("704305");
 });
+
+test("Generate Secret", () => {
+    const secret = TOTP.generateSecret();
+    expect(secret).toHaveLength(16);
+});
