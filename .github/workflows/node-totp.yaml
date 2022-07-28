@@ -1,11 +1,11 @@
-name: node-totp publish
+name: totp publish
 
 on: 
   push:
     branches:
       - 'main'
     paths:
-      - 'packages/node-totp/**'
+      - 'packages/otp/**'
 
 jobs:
   publish-github:
@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: 16.x
           registry-url: https://npm.pkg.github.com
-      - run: npm ci -w packages/node-totp
-      - run: npm run build:types -w packages/node-totp
-      - run: npm run build -w packages/node-totp
-      - run: npm publish --access public -w packages/node-totp
+      - run: npm ci -w packages/totp
+      - run: npm run build:types -w packages/totp
+      - run: npm run build -w packages/totp
+      - run: npm publish --access public -w packages/totp
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -31,9 +31,9 @@ jobs:
         with:
           node-version: 16.x
           registry-url: https://registry.npmjs.org
-      - run: npm ci -w packages/node-totp
-      - run: npm run build:types -w packages/node-totp
-      - run: npm run build -w packages/node-totp
-      - run: npm publish --access public -w packages/node-totp
+      - run: npm ci -w packages/totp
+      - run: npm run build:types -w packages/totp
+      - run: npm run build -w packages/totp
+      - run: npm publish --access public -w packages/totp
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,6 +1,6 @@
 {
-  "name": "@narumir/node-totp",
-  "version": "0.0.3",
+  "name": "@narumir/totp",
+  "version": "0.0.1",
   "description": "totp lib for nodejs",
   "main": "build/index.js",
   "devDependencies": {
