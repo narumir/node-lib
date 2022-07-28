@@ -18,9 +18,21 @@ const envOption = {
     },
 };
 
+const aliasOption = {
+    root: [
+        "./src",
+    ],
+    alias: {
+        src: "./src",
+    },
+};
+
 module.exports = {
     presets: [
         ["@babel/preset-typescript", tscOption],
         ["@babel/preset-env", envOption],
+    ],
+    plugins: [
+        ["module-resolver", aliasOption],
     ],
 };
