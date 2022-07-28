@@ -5,7 +5,7 @@ on:
     branches:
       - 'main'
     paths:
-      - 'packages/otp/**'
+      - 'packages/totp/**'
 
 jobs:
   publish-github:
