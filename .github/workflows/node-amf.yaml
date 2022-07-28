@@ -1,11 +1,11 @@
-name: node-amf publish
+name: amf publish
 
 on: 
   push:
     branches:
       - 'main'
     paths:
-      - 'packages/node-amf/**'
+      - 'packages/amf/**'
 
 jobs:
   publish-github:
@@ -16,9 +16,9 @@ jobs:
         with:
           node-version: 16.x
           registry-url: https://npm.pkg.github.com
-      - run: npm ci -w packages/node-amf
-      - run: npm run build -w packages/node-amf
-      - run: npm publish --access public -w packages/node-amf
+      - run: npm ci -w packages/amf
+      - run: npm run build -w packages/amf
+      - run: npm publish --access public -w packages/amf
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -30,8 +30,8 @@ jobs:
         with:
           node-version: 16.x
           registry-url: https://registry.npmjs.org
-      - run: npm ci -w packages/node-amf
-      - run: npm run build -w packages/node-amf
-      - run: npm publish --access public -w packages/node-amf
+      - run: npm ci -w packages/amf
+      - run: npm run build -w packages/amf
+      - run: npm publish --access public -w packages/amf
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

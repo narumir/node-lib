@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/narumir/node-lib#readme",
   "workspaces": [
-    "packages/node-totp",
-    "packages/node-amf"
+    "packages/totp",
+    "packages/amf"
   ]
 }

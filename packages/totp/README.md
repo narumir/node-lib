@@ -5,7 +5,7 @@ https://datatracker.ietf.org/doc/html/rfc6238
 ## install
 
 ```
-$ npm install @narumir/node-totp
+$ npm install @narumir/totp
 ```
 
 ## use
@@ -13,7 +13,7 @@ $ npm install @narumir/node-totp
 ```
 import {
     TOTP,
-} from "@narumir/node-totp";
+} from "@narumir/totp";
 const otp = new TOTP({ algorithm: "sha1" });
 const token = otp.generate("TL5BNHAVM3OOD4I2", Date.now());
 console.log(token);
